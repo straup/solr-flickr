@@ -1,0 +1,25 @@
+# The long version: http://www.aaronland.info/weblog/2009/12/21/redacted/#woelr
+
+--
+
+THIS IS A WORK IN PROGRESS.
+
+--
+
+This assumes you're using Solr in "multiple core" mode. If you're not sure what
+that means, start here: 
+
+	http://wiki.apache.org/solr/CoreAdmin
+
+In solr/solr.xml add the following to <cores> :
+
+	<core name="geoplanet" instanceDir="solr-geoplanet">
+		<property name="dataDir" value="solr-geoplanet/data" />
+	</core>
+
+--
+
+To start Solr:
+
+	$> cd /path/to/solr
+	$> java -Dsolr.solr.home=. -jar start.jar
